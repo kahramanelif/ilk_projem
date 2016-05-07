@@ -8,4 +8,16 @@
         <p>It works!</p>
 		
 		 <h2><a href="">İkinci gönderim</a></h2>
+		 
+		 <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.yayinlama_tarihi }}</p>
+        <h1><a href="">{{ post.baslik }}</a></h1>
+        <p>{{ post.yazi|linebreaks }}</p>
+    </div>
+{% endfor %}
 </html>
